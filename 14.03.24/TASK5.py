@@ -7,8 +7,6 @@ text2 = text2.split()
 max_len = 0 
 max_len_for_a = 0 
 
-
-
 for i in text1:
     if len(i) > max_len:
         max_len = len(i)

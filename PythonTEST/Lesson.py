@@ -1,10 +1,12 @@
 import random
+def generate():
+    i = random.randbytes(10)
+    i = i.split()
+   
+    ' '.join(map(str, i))
+    for a in i:
+        i.pop("/")
+    return i 
 
-name = input("Enter name>> ").lower()
 
-number = random.randint(1,100)
-
-if number == 69:
-    print(f"Lucky:: {number} , you soo lucky {name}")
-else:
-    print(f"Your number is {number}")
+print(generate())
