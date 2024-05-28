@@ -78,3 +78,4 @@ if __name__ == "__main__":
         print(f"Total with discount: {total_with_discount(order, discount)} UAH")
     except Exception as e:
         print(e)
+
