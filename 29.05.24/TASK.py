@@ -1,7 +1,13 @@
+class OrderException(Exception):
+    def __init__(self, message):
+        self.message = message
+        self.args = (message,)
+
+
 class Dish:
     def __init__(self, name, price):
         if price <= 0:
-            raise Exception(f"Invalid price: {price}. Price must be greater than 0.")
+            raise OrderException(f"Invalid price: {price}. Price must be greater than 0.")
         self.name = name
         self.price = price
 
@@ -29,7 +35,7 @@ class Discount:
 
     def validate_discount(self, value):
         if not (0 <= value <= 1):
-            raise Exception(f"Invalid discount: {value}. Discount must be between 0 and 1.")
+            raise OrderException(f"Invalid discount: {value}. Discount must be between 0 and 1.")
         return value
 
 
@@ -76,6 +82,5 @@ if __name__ == "__main__":
         print(order)
         discount = user_discount()
         print(f"Total with discount: {total_with_discount(order, discount)} UAH")
-    except Exception as e:
+    except OrderException as e:
         print(e)
-
