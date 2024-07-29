@@ -47,7 +47,7 @@ class PaymentProcessor:
         else:
             print("Payment method not available.")
 
-credit_card = CreditCard("1234 5678 9012 3456", "John Doe", "12/25", "123")
+credit_card = CreditCard("1234 5678 9101 1231", "David Rudenko", "12/26", "123")
 bank_transfer = BankTransfer("9876543210", "Global Bank", "GB123456")
 e_wallet = EWallet("wallet123", "PayPal")
 
