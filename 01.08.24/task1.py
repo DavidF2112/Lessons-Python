@@ -19,6 +19,6 @@ def find_fragments(text):
     return fragments
 
 
-text = "Rbbbr and rbr and Rbr and RBBBBBr and rbbr"
+text = "Rbbbr and rbr and Rbr and RBBBBBr and rbbrк"
 matches = find_fragments(text)
 print(matches)
